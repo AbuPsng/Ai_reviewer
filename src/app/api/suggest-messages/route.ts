@@ -1,5 +1,4 @@
 import { responseObject } from "@/helpers/responseObject";
-import { NextResponse } from "next/server";
 const reviews = [
   "Can you offer more vegetarian options on the menu?",
   "Why is the grocery store always out of fresh bananas?",
