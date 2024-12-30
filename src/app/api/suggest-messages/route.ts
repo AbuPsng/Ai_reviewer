@@ -1,6 +1,5 @@
 import { responseObject } from "@/helpers/responseObject";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
 const reviews = [
   "Can you offer more vegetarian options on the menu?",
   "Why is the grocery store always out of fresh bananas?",
@@ -131,18 +130,11 @@ export async function GET() {
       data,
     });
   } catch (error) {
-    if (error instanceof OpenAI.APIError) {
-      const { name, status, headers, message } = error;
-      return NextResponse.json(
-        {
-          name,
-          headers,
-          message,
-        },
-        { status }
-      );
-    } else {
-      console.log("Error while taking a messages for ai", error);
-    }
+    console.log(error);
+    return responseObject({
+      success: false,
+      message: "Failed to fetch suggest Messsages",
+      statusCode: 404,
+    });
   }
 }
