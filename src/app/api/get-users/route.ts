@@ -23,7 +23,6 @@ export async function GET() {
       statusCode: 200,
       data: allUsers,
     });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.log(error);
     return responseObject({
@@ -72,7 +71,6 @@ export async function POST(request: Request) {
       statusCode: 200,
       data: user,
     });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.log(error);
     return responseObject({

@@ -46,7 +46,6 @@ export const authOptions: NextAuthOptions = {
           } else {
             throw new Error("Incorrect Password");
           }
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
           console.log(error, "in login with auth-next");
           throw new Error();
