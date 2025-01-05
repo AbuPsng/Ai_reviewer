@@ -44,7 +44,6 @@ const PublicPage = () => {
         title: "Send Success",
         description: result.data.message,
       });
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast({
         title: "Sending Messsage failed",
@@ -67,7 +66,6 @@ const PublicPage = () => {
       });
       console.log(result.data);
       setSuggestMessages(result.data.data);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast({
         title: "Suggesting Messsage failed",
